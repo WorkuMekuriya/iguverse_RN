@@ -104,8 +104,8 @@ export default class Header extends React.Component<Props, State> {
   }
 
   exitApp = () => {
-    // change modal visibility
-    this.setState({exitApp: true});
+    // change modal visibility for android only
+    this.setState({exitApp: Platform.OS === 'android'});
   };
 
   openMedia = async () => {
